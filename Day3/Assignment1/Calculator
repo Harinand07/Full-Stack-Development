@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator grid</title>
+    <style>
+        .cont{
+            display:grid;
+            background-color: white; 
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+                "input input input input"
+                "one two three plus"
+                "four five six minus"
+                "seven eight nine multiply"
+                "clear zero equals divide";
+            width:350px;
+            height:500px;
+            margin:auto;
+            gap:10px;
+            padding:20px;
+            border-radius:10px;
+            top: 130px;
+            position:relative;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            
+        }
+        .calculator{
+            width:100%;
+            height:250px;
+            margin:auto;
+            
+        }
+        *{
+            text-align:center;
+            font-size:30px;
+        }
+        
+        .cont > div{
+            border:1px solid black;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            border-radius:10px;
+        }
+        #input{
+            grid-area: input;
+            width:100%;
+            height:50px;
+            background-color:#f6f6f6;
+            margin:auto;
+            border:1px solid black;
+            justify-content:flex-end;
+            padding-right:5px;
+            font-size:24px;
+            text-align:right;
+            color:#111;
+            cursor:default;
+        }
+        #one{
+            background-color:whitesmoke;
+            color: black;
+            grid-area: one;
+            padding:5px;
+            justify-content:center;
+        }
+        #two{
+            background-color:whitesmoke;
+            padding:5px;
+            color: black;
+            grid-area: two;
+        }
+        #three{
+            background-color:whitesmoke;
+            padding:5px;
+            color: black;
+            grid-area: three;
+        }
+        #four{
+            background-color:whitesmoke;
+            padding:5px;
+            color: black;
+            grid-area: four;  
+        }
+        #five{
+            background-color:whitesmoke;
+            padding:5px;
+            color: black;
+            grid-area: five;
+        }
+        #six{
+            background-color:whitesmoke;
+            padding:5px;
+            color: black;
+            grid-area: six;
+        }
+        #seven{
+            background-color:whitesmoke;
+            padding:5px;
+            color: black;
+            grid-area: seven;
+        }
+        #eight{
+            background-color:whitesmoke;
+            padding:5px;
+            color: black;
+            grid-area: eight;
+        }
+        #nine{
+            background-color:whitesmoke;
+            padding:5px;
+            color: black;
+            grid-area: nine;
+        }
+        #plus{
+            background-color:black;
+            padding:5px;
+            color: white;
+            grid-area: plus;
+        }
+        #minus{
+            background-color:black;
+            padding:5px;
+            color: white;
+            grid-area: minus;
+        }
+        #multiply{
+            background-color:black;
+            padding:5px;
+            color: white;
+            grid-area: multiply;
+        }
+        #divide{
+            background-color:black;
+            padding:5px;
+            color: white;
+            grid-area: divide;
+        }
+        #clear{
+            background-color:red;
+            padding:5px;
+            color: white;
+            grid-area: clear;
+        }
+        #equals{
+            background-color:black;
+            padding:5px;
+            color: white;
+            grid-area: equals;
+        }
+        #zero{
+            background-color:whitesmoke;
+            padding:5px;
+            color: black;
+            grid-area: zero;
+        }
+        .cont>div:hover{
+            background-color: peachpuff;
+            cursor:pointer;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Calculator</h1>
+    <div class="calculator">
+    <div class="cont">
+        <div id="input"></div>
+        <div id="one">1</div>
+        <div id = "two">2</div>
+        <div id = "three">3</div>
+        <div id = "four">4</div>
+        <div id = "five">5</div>
+        <div id = "six">6</div>
+        <div id = "seven">7</div>
+        <div id = "eight">8</div>
+        <div id = "nine">9</div>
+        <div id = "plus">+</div>
+        <div id = "minus">-</div>
+        <div id = "multiply">*</div>
+        <div id = "clear">C</div>
+        <div id = "zero">0</div>
+        <div id = "equals">=</div>
+        <div id = "divide">/</div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
