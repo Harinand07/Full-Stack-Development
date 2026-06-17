@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create HTML Element via js</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //step 1 create element
+    const el = document.createElement("h1");
+    console.log(el);
+
+    //step 2 set/rite value
+    el.innerText = "hello world";
+
+    //step 3 set attribute
+    el.setAttribute("id","head");
+
+    //step 4 attatch el to body
+    document.querySelector("body").append(el);
+    //step 5
+    el.style.color = "teal";
+</script>

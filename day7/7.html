@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localstorage</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //1. save rite data
+
+    localStorage.
+    localStorage.setItem("name","love")
+    localStorage.setItem("id",33);
+
+    localStorage.setItem("hobby",JSON.stringify([1,5,9]))
+
+    // get read
+    let nm1 = JSON.parse(localStorage.getItem("hobby"));
+    let nm = localStorage.getItem("name");
+    console.log(nm);
+
+    //3 remove.delete key value pair
+    localStorage.removeItem("name");
+
+    //4 clear
+    localStorage.clear();
+</script>
