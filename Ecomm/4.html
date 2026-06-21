@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async await keyword</title>
+</head>
+
+<body>
+    <!-- fetch(api)
+    .then((res) => res.json())
+    .then((data) => console.log(data)
+    ).catch((err) => console.log(err)
+    ) -->
+
+</body>
+
+</html>
+
+<script>
+    const api = "https://jsonplaceholder.typicode.com/todos";
+    //   const hii = async  function (){
+    //         console.log("hello");
+    //     }
+
+    //     console.log(hii());
+
+    data()
+    async function data() {
+        try {
+            const response = await fetch(api);
+            const res = await response.json();
+            console.log(res);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+</script>

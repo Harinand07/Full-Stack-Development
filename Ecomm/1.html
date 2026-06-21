@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+
+
+</body>
+
+</html>
+
+<script>
+    // <!-- 1. Create a new Promise -->
+    var promise = new Promise((resolve, reject) => {
+        return reject("Promise has resolved")
+    });
+    console.log(promise);
+
+    // 2. Read values from Promise
+
+    promise.then((res) => {
+        console.log(res);
+
+    }).catch((rej) => {
+        console.log(rej);
+
+    })
+
+</script>
