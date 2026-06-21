@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slideshow</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        background-color:#f0f0f0;
+    }
+
+    .container{
+        text-align:center;
+    }
+
+    img{
+        width:700px;
+        height:400px;
+        object-fit:cover;
+        border-radius:10px;
+        box-shadow:0px 0px 10px gray;
+    }
+
+    button{
+        margin:15px;
+        padding:10px 20px;
+        font-size:16px;
+        cursor:pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <img id="slide" src="" alt="slideshow">
+
+    <div>
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+</div>
+
+<script>
+
+let images = [
+"https://picsum.photos/id/1011/700/400",
+"https://picsum.photos/id/1015/700/400",
+"https://picsum.photos/id/1016/700/400",
+"https://picsum.photos/id/1020/700/400",
+"https://picsum.photos/id/1024/700/400",
+"https://picsum.photos/id/1025/700/400",
+"https://picsum.photos/id/1031/700/400",
+"https://picsum.photos/id/1035/700/400",
+"https://picsum.photos/id/1039/700/400",
+"https://picsum.photos/id/1043/700/400",
+"https://picsum.photos/id/1050/700/400",
+"https://picsum.photos/id/1057/700/400",
+"https://picsum.photos/id/106/700/400",
+"https://picsum.photos/id/1069/700/400",
+"https://picsum.photos/id/1074/700/400",
+"https://picsum.photos/id/1080/700/400",
+"https://picsum.photos/id/1084/700/400",
+"https://picsum.photos/id/1081/700/400",
+"https://picsum.photos/id/1082/700/400",
+"https://picsum.photos/id/1083/700/400"
+];
+
+let index = 0;
+
+let slide = document.getElementById("slide");
+
+slide.src = images[index];
+
+function showImage(){
+    slide.src = images[index];
+}
+
+document.getElementById("next").addEventListener("click",function(){
+    index++;
+    if(index === images.length){
+        index = 0;
+    }
+    showImage();
+});
+
+document.getElementById("prev").addEventListener("click",function(){
+    index--;
+    if(index < 0){
+        index = images.length - 1;
+    }
+    showImage();
+});
+
+setInterval(function(){
+    index++;
+    if(index === images.length){
+        index = 0;
+    }
+    showImage();
+},3000);
+
+</script>
+
+</body>
+</html>
