@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    1. Take a count value as a variable
+    - Create a new promise in such a way that if the count is > 0, resolve it with "Positive count", else reject it with
+    "Negative count"
+</body>
+
+</html>
+
+<script>
+    var count = 10;
+
+    var promise = new Promise((req, res) => {
+        if (count > 0) {
+            return res("Positive Count")
+        } else {
+            return req("Negative count")
+        }
+    })
+
+    promise.then((res) => {
+        console.log("resolve state", res);
+
+    }).catch((err) => {
+        console.log("Rejected state", err);
+
+    })
+</script>

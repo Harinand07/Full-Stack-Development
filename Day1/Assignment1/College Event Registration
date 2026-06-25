@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>College Event Registration</h1>
+    <form action="">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" size="6" placeholder="Enter your age" required>
+        <br><br>
+        <label>Select Event Category:</label>
+        <br>
+        <input type="checkbox" id="coding" name="category" value="coding">
+        <label for="coding">Coding Hackathon💻</label>
+        <br>
+        <input type="checkbox" id="debate" name="category" value="debate">
+        <label for="debate">Debate Competition 🎤</label>
+        <br>
+        <input type="checkbox" id="sports" name="category" value="sports">
+        <label for="sports">Sports Tournament ⚽</label>
+        <br><br>
+        <label for="event-date">Event Date:</label>
+        <input type="date" id="event-date" name="event-date" required>
+        <br><br>
+        <label for="timeslot">Preferred Time Slot:</label>
+        <input type="time" id="timeslot" name="timeslot" required>
+        <br><br>
+        <input type="submit" value="Register Now">
+    </form>
+</body>
+</html>

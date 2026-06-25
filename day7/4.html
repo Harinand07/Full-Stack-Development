@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form </title>
+</head>
+<body>
+    <form action="">
+        <input type = "text" id = "em" placeholder="Enter your email">
+        <input type = "text" id = "pp" placeholder="Enter your password">
+
+        <input type = "submit">
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",getdata);
+    function getdata(e){
+        e.preventDefault();
+        const em = document.querySelector("#em").value;
+        const pp = document.querySelector("#pp").value;
+
+        console.log(em, pp);
+    }
+</script>
+    
+    
