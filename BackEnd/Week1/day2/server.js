@@ -71,22 +71,22 @@ app.get('/about', (req,res)=>{
 
 let students = [
     {
-        name:'Ankit',
+        name:'Harinand',
         age:27
 
     },
     {
-        name:'Rahul',
+        name:'Kushagra',
         age:23
     },
     {
-        name:'Priya',
+        name:'Mithu',
         age:40
     }
 ]
 
 
-let students = ['ankit', 'Rahul', 'Priya']
+let students = ['Harinand', 'Kushagra', 'Mithu']
 
  
 app.get('/getStudents', (req,res)=>{
