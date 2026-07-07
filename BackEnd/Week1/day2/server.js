@@ -23,7 +23,7 @@ console.log('server is running in port:',port);
 
 //-----------------------------CREATE DATA------------------------------>
 
-let students = ['ankit','sachin','rohit','rahul'];
+let students = ['harinand','kushagra','mithu','Abhiraj'];
 app.get('/',(req,res)=>{
     res.json({
         data:students,
