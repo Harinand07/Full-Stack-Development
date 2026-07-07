@@ -1,17 +1,17 @@
 const employee = [
     {
-        name: 'Rahul',
-        email: 'rahul@gmail.com',
+        name: 'harinand',
+        email: 'harinand@gmail.com',
         empId: '1100'
     },
     {
-        name: 'Abhishek',
-        email: 'abhishek@gmail.com',
+        name: 'Kushagra',
+        email: 'Kushagra@gmail.com',
         empId: '1101'
     },
     {
-        name: 'Nandan',
-        email: 'nandan@gmail.com',
+        name: 'abhiNandan',
+        email: 'abhinandan@gmail.com',
         empId: '1102'
     }
 ]
