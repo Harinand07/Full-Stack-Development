@@ -1,37 +1,4 @@
 
-// Notes Management
-
-// Create a new note.
-// Retrieve all notes created by the logged-in user.
-// Update an existing note owned by the logged-in user.
-// Delete a note owned by the logged-in user.
-
-
-// Method
-// Endpoint
-// Description
-// POST
-// /register
-// Register a new user
-// POST
-// /login
-// Authenticate user and return JWT
-// POST
-// /notes
-// Create a new note
-// GET
-// /notes
-// Retrieve all notes of the logged-in user
-// PUT
-// /notes/:id
-// Update a note owned by the logged-in user
-
-
-// DELETE
-// /notes/:id
-// Delete a note owned by the logged-in user
-
-
 import User from "../model/user.js"
 import bcrypt from "bcrypt"
 import jsonwebtoken from "jsonwebtoken"
@@ -173,32 +140,6 @@ const signup = async (req,res)=>{
                 message:"Notes retreived successfully",
                 notes
             })
-
-        }catch(error){
-            res.status(500).json({
-                success:false,
-                message:"Internal Server Error",
-                error
-            })
-        }
-    }
-
-    //update a note owned by the logged-in user
-    const updateNote = async (req,res)=>{
-        try{
-            let {heading,content} = req.body
-            let {noteid} = req.params
-            let userid = req.user.id
-
-            if(!noteid){
-                return res.status(400).json({
-                    success:false,
-                    message:"noteId is required"
-                })
-            }
-
-            let note = await Note.findOne({_id:noteid,user:userid})
-            
 
         }catch(error){
             res.status(500).json({
